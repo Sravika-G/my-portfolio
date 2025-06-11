@@ -5,7 +5,7 @@ import { useRef } from 'react';
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
     <section id="about" className="section-spacing bg-card/30">

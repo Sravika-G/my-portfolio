@@ -10,7 +10,7 @@ import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',

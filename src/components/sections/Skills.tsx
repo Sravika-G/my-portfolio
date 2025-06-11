@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -6,7 +5,7 @@ import { Code, Cloud, Database, Wrench, Brain } from 'lucide-react';
 
 const Skills = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const skillCategories = [
     {
