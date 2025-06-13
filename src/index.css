@@ -80,9 +80,9 @@
     display: none;
   }
 
-  /* Auto-scrolling animation */
-  .animate-scroll {
-    animation: scroll 30s linear infinite;
+  /* Auto-scrolling animation - faster speed */
+  .animate-scroll-fast {
+    animation: scroll-fast 20s linear infinite;
   }
 
   .pause-animation {
@@ -94,7 +94,7 @@
   }
 }
 
-@keyframes scroll {
+@keyframes scroll-fast {
   0% {
     transform: translateX(0);
   }

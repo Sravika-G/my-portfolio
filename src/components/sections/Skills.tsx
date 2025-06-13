@@ -62,11 +62,14 @@ const Skills = () => {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 1, delay: 0.3 }}
-            className="flex animate-scroll hover:pause-animation"
+            className="flex animate-scroll-fast hover:pause-animation"
           >
             {duplicatedSkills.map((category, index) => (
-              <div
+              <motion.div
                 key={`${category.title}-${index}`}
+                initial={{ opacity: 0, x: 50 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.1 * (index % skillCategories.length) }}
                 className="bg-card rounded-xl p-4 md:p-6 glow-border hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 flex-shrink-0 w-72 md:w-80 min-h-[250px] md:min-h-[280px] mx-3"
               >
                 <div className="flex items-center mb-4 md:mb-6">
@@ -89,7 +92,7 @@ const Skills = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
 

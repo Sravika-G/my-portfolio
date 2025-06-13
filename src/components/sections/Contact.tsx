@@ -55,19 +55,19 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/sravika",
-      href: "https://linkedin.com/in/sravika"
+      value: "linkedin.com/in/sravika-gillela",
+      href: "https://www.linkedin.com/in/sravika-gillela-532a382a9/"
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/sravika",
-      href: "https://github.com/sravika"
+      value: "github.com/Sravika-G",
+      href: "https://github.com/Sravika-G"
     }
   ];
 
   return (
-    <section id="contact" className="section-spacing bg-card/30">
+    <section id="contact" className="py-12 md:py-16 lg:py-20 px-4 md:px-8 bg-card/30">
       <div className="max-w-6xl mx-auto" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -75,24 +75,24 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Get In <span className="text-primary">Touch</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground">
             Let's connect and discuss opportunities
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
+            className="space-y-6 md:space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 md:mb-6">
                 Contact Information
               </h3>
               <div className="space-y-4">
@@ -114,12 +114,12 @@ const Contact = () => {
                           href={info.href}
                           target={info.href.startsWith('http') ? '_blank' : undefined}
                           rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                          className="text-foreground hover:text-primary transition-colors duration-200"
+                          className="text-foreground hover:text-primary transition-colors duration-200 text-sm md:text-base"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-foreground">{info.value}</p>
+                        <p className="text-foreground text-sm md:text-base">{info.value}</p>
                       )}
                     </div>
                   </motion.div>
@@ -134,7 +134,7 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                   Name
