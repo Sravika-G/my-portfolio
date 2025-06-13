@@ -92,7 +92,7 @@ const Hero = () => {
                 className="w-80 h-80 rounded-full overflow-hidden glow-border"
               >
                 <img
-                  src={`https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=800&h=800`}
+                  src="/lovable-uploads/f36d0724-0997-4080-ac03-a499c455cdef.png"
                   alt="Sravika Gillela"
                   className="w-full h-full object-cover"
                 />

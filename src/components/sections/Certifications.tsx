@@ -1,7 +1,8 @@
+
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Award, ExternalLink } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 const Certifications = () => {
   const ref = useRef(null);
@@ -9,16 +10,26 @@ const Certifications = () => {
 
   const certifications = [
     {
-      title: "Skyscanner Software Engineering Virtual Experience",
-      provider: "Forage",
-      description: "Completed virtual internship program focusing on software engineering practices and real-world project development",
-      skills: ["Software Engineering", "Problem Solving", "Project Management"]
-    },
-    {
-      title: "JPMorgan Chase Software Engineering Virtual Experience",
+      title: "JPMorgan Chase & Co. Software Engineering Job Simulation",
       provider: "Forage",
       description: "Gained hands-on experience with financial technology and software development in enterprise environments",
-      skills: ["Financial Technology", "Software Development", "Enterprise Solutions"]
+      skillsGained: [
+        "Kafka Integration and Event Streaming",
+        "REST API Development", 
+        "H2 Database",
+        "Microservice Project Setup"
+      ]
+    },
+    {
+      title: "Skyscanner Software Engineering Job Simulation",
+      provider: "Forage", 
+      description: "Completed virtual internship program focusing on software engineering practices and real-world project development",
+      skillsGained: [
+        "React.js (Backpack Design System)",
+        "Microservice Development",
+        "Mobile UI Development",
+        "User-Centered Design and UX Principles"
+      ]
     }
   ];
 
@@ -54,33 +65,37 @@ const Certifications = () => {
                   <Award className="w-6 h-6 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold text-foreground mb-1">
+                  <h3 className="text-lg font-bold text-primary mb-1">
                     {cert.title}
                   </h3>
-                  <p className="text-primary font-semibold text-sm">
+                  <p className="text-foreground font-semibold text-sm">
                     {cert.provider}
                   </p>
                 </div>
               </div>
 
-              <p className="text-foreground mb-4 text-sm leading-relaxed">
+              <p className="text-foreground mb-6 text-sm leading-relaxed">
                 {cert.description}
               </p>
 
               <div className="space-y-3">
-                <h4 className="text-sm font-semibold text-muted-foreground">
+                <h4 className="text-sm font-semibold text-primary">
                   Skills Gained:
                 </h4>
-                <div className="flex flex-wrap gap-2">
-                  {cert.skills.map((skill, skillIndex) => (
-                    <span
+                <ul className="space-y-2">
+                  {cert.skillsGained.map((skill, skillIndex) => (
+                    <motion.li
                       key={skillIndex}
-                      className="px-2 py-1 bg-primary/10 text-primary text-xs rounded border border-primary/20"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={isInView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ duration: 0.4, delay: (index * 0.2) + (skillIndex * 0.1) }}
+                      className="flex items-start text-sm"
                     >
-                      {skill}
-                    </span>
+                      <div className="w-1.5 h-1.5 bg-muted-foreground rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                      <span className="text-muted-foreground leading-relaxed">{skill}</span>
+                    </motion.li>
                   ))}
-                </div>
+                </ul>
               </div>
             </motion.div>
           ))}
