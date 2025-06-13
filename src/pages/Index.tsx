@@ -25,10 +25,8 @@ const Index = () => {
       </main>
       
       <footer className="bg-card border-t border-border py-8">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 text-center">
-          <p className="text-muted-foreground text-sm md:text-base">
-            © 2024 Sravika Gillela. Built with React, TypeScript, and Tailwind CSS.
-          </p>
+        <div className="max-w-6xl mx-auto px-4 md:px-8">
+          {/* Clean, empty footer with consistent spacing */}
         </div>
       </footer>
     </div>
