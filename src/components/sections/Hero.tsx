@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { ExternalLink } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -55,8 +56,14 @@ const Hero = () => {
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-base md:text-lg px-6 md:px-8 py-3 md:py-4"
                 asChild
               >
-                <a href="/Sravika Gillela_Resume_.pdf" download>
-                  Download Resume
+                <a 
+                  href="https://1drv.ms/b/c/c7068ff6c680df91/EUP55NwLSFZKrYYsYBBVfr4BoDYu1clt0sMYRYO6OX8Fqg?e=iwqh4e" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  View My Resume
+                  <ExternalLink className="w-4 h-4" />
                 </a>
               </Button>
               <Button
