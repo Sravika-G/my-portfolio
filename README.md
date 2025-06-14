@@ -1,73 +1,111 @@
-# Welcome to your Lovable project
+# 🌐 Sravika Gillela – Personal Portfolio
 
-## Project info
+Welcome to the source code for my personal portfolio website. This project showcases my academic background, technical skills, professional experiences, and selected projects. Built with modern web technologies, this site reflects my passion for software engineering, data analytics, and machine learning.
 
-**URL**: https://lovable.dev/projects/23476c56-c1fb-49d8-b600-ba615fe742ab
+---
 
-## How can I edit this code?
+## 🚀 Live Demo
 
-There are several ways of editing your application.
+🔗 [**View My Portfolio**](https://your-portfolio.vercel.app)  
+_(Replace this link with your actual deployed URL)_
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/23476c56-c1fb-49d8-b600-ba615fe742ab) and start prompting.
+## ✨ Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- Fully responsive, mobile-first design
+- Dark-themed modern UI with Tailwind CSS
+- Smooth scroll and animation effects via Framer Motion
+- Auto-scrolling skills section with categorized cards
+- Integrated project gallery with tech stack badges
+- Clean navigation across sections:
+  - Home
+  - About
+  - Skills
+  - Projects
+  - Education
+  - Experience
+  - Certifications
+  - Contact
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Technologies Used
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+| Category        | Tools & Libraries                                  |
+|----------------|-----------------------------------------------------|
+| Frontend       | React.js, JSX/TSX                                   |
+| Styling        | Tailwind CSS                                        |
+| Animations     | Framer Motion                                       |
+| Build Tools    | Vite or Create React App (depending on setup)       |
+| Version Control| Git, GitHub                                         |
+| Deployment     | Vercel or Netlify (recommended for production)      |
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📁 Project Structure
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+my-portfolio/
+├── public/ # Static assets (favicon, images)
+├── src/
+│ ├── components/ # Shared components (Navbar, Footer, Button, etc.)
+│ ├── sections/ # Page sections (Hero, Skills, Projects, etc.)
+│ ├── App.jsx # Main app entry point
+│ └── index.js # Renders app to the DOM
+├── package.json # Project metadata & dependencies
+├── tailwind.config.js # Tailwind CSS configuration
+└── README.md # This file
 
-# Step 3: Install the necessary dependencies.
-npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 🧠 Projects Highlighted
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Customer Churn Prediction**  
+  Built with Python, Streamlit, and Scikit-learn to predict telecom churn with 76.5% accuracy.
 
-**Use GitHub Codespaces**
+- **Math Pawzle**  
+  A math puzzle game for kids built in Unity and deployed on Azure, focused on interactive learning.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **IoT DDoS Defense System**  
+  A real-time network monitoring tool built with Python, AWS Shield, and Wireshark.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🎓 Education
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+**California State University, San Bernardino**  
+_M.S. in Computer Science (2023–2025)_
 
-## How can I deploy this project?
+**Sreyas Institute of Engineering and Technology**  
+_B.Tech in Electronics & Communication Engineering (2019–2023)_
 
-Simply open [Lovable](https://lovable.dev/projects/23476c56-c1fb-49d8-b600-ba615fe742ab) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 📄 Certifications
 
-Yes, you can!
+- Skyscanner Software Engineering Virtual Experience – Forage  
+  _Skills: React.js, Backpack UI, Microservices, UX_
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- JPMorgan Chase Software Engineering Virtual Experience – Forage  
+  _Skills: Kafka, REST APIs, H2 Database, Microservice Setup_
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+## 📬 Contact
+
+- 📧 Email: sravikagillela02@gmail.com  
+- 🔗 LinkedIn: [linkedin.com/in/sravika-gillela-532a382a9](https://www.linkedin.com/in/sravika-gillela-532a382a9/)  
+- 💻 GitHub: [github.com/Sravika-G](https://github.com/Sravika-G)
+
+---
+
+## 📢 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+### 💡 Want to Build Something Similar?
+
+Fork this repository and customize it to create your own personal website!
