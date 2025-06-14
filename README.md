@@ -46,14 +46,23 @@ _(Replace this link with your actual deployed URL)_
 ## 📁 Project Structure
 
 my-portfolio/
+
 ├── public/ # Static assets (favicon, images)
+
 ├── src/
+
 │ ├── components/ # Shared components (Navbar, Footer, Button, etc.)
+
 │ ├── sections/ # Page sections (Hero, Skills, Projects, etc.)
+
 │ ├── App.jsx # Main app entry point
+
 │ └── index.js # Renders app to the DOM
+
 ├── package.json # Project metadata & dependencies
+
 ├── tailwind.config.js # Tailwind CSS configuration
+
 └── README.md # This file
 
 
