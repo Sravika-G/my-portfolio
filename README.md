@@ -6,8 +6,7 @@ Welcome to the source code for my personal portfolio website. This project showc
 
 ## 🚀 Live Demo
 
-🔗 [**View My Portfolio**](https://your-portfolio.vercel.app)  
-_(Replace this link with your actual deployed URL)_
+🔗 [**View My Portfolio**](https://my-portfolio-delta-gilt-14.vercel.app)  
 
 ---
 
