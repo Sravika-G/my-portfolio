@@ -31,7 +31,7 @@ const Hero = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-lg md:text-xl lg:text-2xl text-muted-foreground"
             >
-              Software Engineer & Computer Science Graduate Student
+              Software Engineer | AI & Cloud Systems
             </motion.p>
 
             <motion.p
@@ -101,9 +101,9 @@ const Hero = () => {
                 className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glow-border"
               >
                 <img
-                  src="/lovable-uploads/f36d0724-0997-4080-ac03-a499c455cdef.png"
+                  src="/lovable-uploads/sravika-profile.png"
                   alt="Sravika Gillela"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </motion.div>
             </div>
