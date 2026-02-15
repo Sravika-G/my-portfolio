@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { GraduationCap, Calendar, MapPin } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 
 const Education = () => {
   const ref = useRef(null);
@@ -12,7 +12,6 @@ const Education = () => {
       degree: "Master of Science in Computer Science",
       school: "California State University, San Bernardino",
       period: "2023 – 2025",
-      gpa: "3.68/4.00",
       location: "San Bernardino, CA",
       courses: ["Artificial Intelligence", "Machine Learning", "Data Structures & Algorithms", "Distributed Computing"]
     },
@@ -20,9 +19,8 @@ const Education = () => {
       degree: "Bachelor of Technology in Electronics and Communication Engineering",
       school: "Sreyas Institute of Engineering and Technology",
       period: "2019 – 2023",
-      gpa: "6.8/10.0",
       location: "Hyderabad, India",
-      courses: ["Digital Signal Processing", "Computer Networks", "Programming Fundamentals", "Mathematics"]
+      courses: ["Digital Signal Processing", "Computer Networks", "Programming Fundamentals", "Mathematics", "Embedded Systems"]
     }
   ];
 
@@ -44,7 +42,6 @@ const Education = () => {
         </motion.div>
 
         <div className="relative">
-          {/* Timeline line */}
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/30 hidden md:block"></div>
 
           <div className="space-y-12">
@@ -56,7 +53,6 @@ const Education = () => {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="relative"
               >
-                {/* Timeline dot */}
                 <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background hidden md:block"></div>
 
                 <div className="md:ml-20 bg-card rounded-lg p-6 glow-border">
@@ -77,10 +73,6 @@ const Education = () => {
                       <div className="flex items-center gap-2">
                         <MapPin className="w-4 h-4" />
                         {edu.location}
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <GraduationCap className="w-4 h-4" />
-                        GPA: {edu.gpa}
                       </div>
                     </div>
                   </div>

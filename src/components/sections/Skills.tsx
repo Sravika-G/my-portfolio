@@ -53,7 +53,6 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        {/* Scroll hint */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
@@ -63,7 +62,6 @@ const Skills = () => {
           Scroll →
         </motion.p>
 
-        {/* Horizontally Scrollable Container with visible scrollbar */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
@@ -78,7 +76,7 @@ const Skills = () => {
                 initial={{ opacity: 0, x: 50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
-                className="bg-card rounded-xl p-4 md:p-6 glow-border hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 flex-shrink-0 w-72 md:w-80 min-h-[250px] md:min-h-[280px]"
+                className="bg-card rounded-xl p-4 md:p-6 glow-border hover:shadow-[0_0_25px_hsl(142.1_76.2%_36.3%/0.4)] transition-all duration-300 flex-shrink-0 w-72 md:w-80 min-h-[250px] md:min-h-[280px]"
               >
                 <div className="flex items-center mb-4 md:mb-6">
                   <div className="p-2 md:p-3 bg-primary/10 rounded-lg mr-3 md:mr-4">
