@@ -27,16 +27,10 @@ const About = () => {
             className="space-y-4 md:space-y-6 text-base md:text-lg text-foreground leading-relaxed"
           >
             <p>
-              I'm a dedicated Computer Science graduate student with a passion for leveraging 
-              technology to solve real-world problems. My journey in tech has been driven by 
-              curiosity and a desire to create meaningful impact through innovative solutions.
-            </p>
-
-            <p>
-              Currently pursuing my Master's degree at California State University, San Bernardino, 
-              I specialize in artificial intelligence, machine learning, and cloud computing. 
-              My experience spans from developing ML models for customer churn prediction to 
-              creating educational games and implementing robust cloud infrastructure.
+              I'm a software engineer with a strong focus on AI, machine learning, and scalable cloud systems. 
+              I enjoy building intelligent applications that solve real-world problems, from predictive analytics 
+              platforms to spatial data visualization tools. My work combines research-driven development with 
+              production-ready engineering.
             </p>
 
             <motion.div

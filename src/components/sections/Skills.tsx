@@ -36,9 +36,6 @@ const Skills = () => {
     }
   ];
 
-  // Duplicate the skills array for seamless scrolling
-  const duplicatedSkills = [...skillCategories, ...skillCategories];
-
   return (
     <section id="skills" className="py-12 md:py-16 lg:py-20 px-4 md:px-8 bg-card/30">
       <div className="max-w-7xl mx-auto" ref={ref}>
@@ -56,21 +53,32 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        {/* Auto-scrolling Skills Container */}
-        <div className="relative overflow-hidden">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="flex animate-scroll-fast hover:pause-animation"
-          >
-            {duplicatedSkills.map((category, index) => (
+        {/* Scroll hint */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-sm text-muted-foreground mb-4 text-right"
+        >
+          Scroll →
+        </motion.p>
+
+        {/* Horizontally Scrollable Container with visible scrollbar */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="overflow-x-auto pb-4"
+          style={{ scrollbarColor: 'hsl(142.1 76.2% 36.3%) transparent' }}
+        >
+          <div className="flex gap-6 min-w-max px-1">
+            {skillCategories.map((category, index) => (
               <motion.div
-                key={`${category.title}-${index}`}
+                key={category.title}
                 initial={{ opacity: 0, x: 50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.1 * (index % skillCategories.length) }}
-                className="bg-card rounded-xl p-4 md:p-6 glow-border hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 flex-shrink-0 w-72 md:w-80 min-h-[250px] md:min-h-[280px] mx-3"
+                transition={{ duration: 0.8, delay: 0.1 * index }}
+                className="bg-card rounded-xl p-4 md:p-6 glow-border hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 flex-shrink-0 w-72 md:w-80 min-h-[250px] md:min-h-[280px]"
               >
                 <div className="flex items-center mb-4 md:mb-6">
                   <div className="p-2 md:p-3 bg-primary/10 rounded-lg mr-3 md:mr-4">
@@ -82,11 +90,8 @@ const Skills = () => {
                 </div>
 
                 <div className="space-y-2 md:space-y-3">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div
-                      key={skill}
-                      className="flex items-center"
-                    >
+                  {category.skills.map((skill) => (
+                    <div key={skill} className="flex items-center">
                       <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
                       <span className="text-foreground text-sm md:text-base">{skill}</span>
                     </div>
@@ -94,22 +99,8 @@ const Skills = () => {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
-
-          {/* Gradient Fade Effects */}
-          <div className="absolute top-0 left-0 w-8 md:w-16 h-full bg-gradient-to-r from-card/30 via-card/30 to-transparent pointer-events-none z-10"></div>
-          <div className="absolute top-0 right-0 w-8 md:w-16 h-full bg-gradient-to-l from-card/30 via-card/30 to-transparent pointer-events-none z-10"></div>
-        </div>
-
-        {/* Mobile/Tablet Hint */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center text-xs md:text-sm text-muted-foreground mt-6 lg:hidden"
-        >
-          Skills auto-scroll continuously ↔
-        </motion.p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

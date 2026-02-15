@@ -5,7 +5,7 @@ import { useRef } from 'react';
 
 const Projects = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const projects = [
     {
@@ -34,6 +34,33 @@ const Projects = () => {
         "Network traffic analysis using Python and Wireshark"
       ],
       technologies: ["Python", "AWS Shield", "Wireshark", "Network Security", "Real-time Processing"]
+    },
+    {
+      title: "Predictive Analytics for E-Commerce Sales",
+      description: [
+        "Built time-series forecasting model using Python and Facebook Prophet",
+        "Developed end-to-end data pipeline and cleaned large sales datasets",
+        "Created interactive dashboards using Tableau and Streamlit"
+      ],
+      technologies: ["Python", "Prophet", "Time Series", "Tableau", "Streamlit", "Data Analytics"]
+    },
+    {
+      title: "AI SmartFlow (AI Task Scheduler)",
+      description: [
+        "Intelligent task prioritization and scheduling system",
+        "Built scalable backend with clean modular architecture",
+        "Designed responsive UI with smooth interactions"
+      ],
+      technologies: ["React", "AI", "Scheduling Algorithms", "REST APIs"]
+    },
+    {
+      title: "Lyrics Mood AI",
+      description: [
+        "NLP-based mood detection system from song lyrics",
+        "Implemented text preprocessing and classification models",
+        "Visualized predictions with interactive frontend"
+      ],
+      technologies: ["Python", "NLP", "Machine Learning", "Data Visualization"]
     }
   ];
 
@@ -60,8 +87,8 @@ const Projects = () => {
               key={project.title}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              whileHover={{ y: -5 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              whileHover={{ y: -8 }}
               className="bg-card rounded-lg p-4 md:p-6 glow-border hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
             >
               <div className="space-y-4">
