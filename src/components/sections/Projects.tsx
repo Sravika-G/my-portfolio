@@ -2,6 +2,8 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Github } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Projects = () => {
   const ref = useRef(null);
@@ -9,43 +11,8 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Customer Churn Prediction",
-      description: [
-        "Developed ML model achieving 76.5% accuracy using Python and scikit-learn",
-        "Created interactive Streamlit dashboard for data visualization",
-        "Implemented feature engineering and model optimization techniques"
-      ],
-      technologies: ["Python", "Scikit-learn", "Streamlit", "Pandas", "Machine Learning"]
-    },
-    {
-      title: "Math Pawzle",
-      description: [
-        "Unity-based educational game focused on mathematics learning",
-        "Deployed on Azure with CI/CD pipeline implementation",
-        "Designed engaging user interface with gamification elements"
-      ],
-      technologies: ["Unity", "C#", "Azure", "Game Development", "CI/CD"]
-    },
-    {
-      title: "DDoS Mitigation System",
-      description: [
-        "Real-time DDoS attack detection and mitigation system",
-        "Integrated AWS Shield for enhanced security protection",
-        "Network traffic analysis using Python and Wireshark"
-      ],
-      technologies: ["Python", "AWS Shield", "Wireshark", "Network Security", "Real-time Processing"]
-    },
-    {
-      title: "Predictive Analytics for E-Commerce Sales",
-      description: [
-        "Built time-series forecasting model using Python and Facebook Prophet",
-        "Developed end-to-end data pipeline and cleaned large sales datasets",
-        "Created interactive dashboards using Tableau and Streamlit"
-      ],
-      technologies: ["Python", "Prophet", "Time Series", "Tableau", "Streamlit", "Data Analytics"]
-    },
-    {
-      title: "AI SmartFlow (AI Task Scheduler)",
+      title: "SmartFlow Scheduler",
+      github: "https://github.com/Sravika-G/smartflow-scheduler",
       description: [
         "Intelligent task prioritization and scheduling system",
         "Built scalable backend with clean modular architecture",
@@ -55,12 +22,43 @@ const Projects = () => {
     },
     {
       title: "Lyrics Mood AI",
+      github: "https://github.com/Sravika-G/lyrics-mood-ai",
       description: [
         "NLP-based mood detection system from song lyrics",
         "Implemented text preprocessing and classification models",
         "Visualized predictions with interactive frontend"
       ],
       technologies: ["Python", "NLP", "Machine Learning", "Data Visualization"]
+    },
+    {
+      title: "Predictive Analytics for E-Commerce Sales",
+      github: "https://github.com/Sravika-G/predictive-analytics-for-e-commerce-sales",
+      description: [
+        "Built time-series forecasting model using Python and Facebook Prophet",
+        "Developed end-to-end data pipeline and cleaned large sales datasets",
+        "Created interactive dashboards using Tableau and Streamlit"
+      ],
+      technologies: ["Python", "Prophet", "Time Series", "Tableau", "Streamlit", "Data Analytics"]
+    },
+    {
+      title: "Customer Churn Prediction",
+      github: "https://github.com/Sravika-G/Customer-Churn-Prediction",
+      description: [
+        "Developed ML model achieving 76.5% accuracy using Python and scikit-learn",
+        "Created interactive Streamlit dashboard for data visualization",
+        "Implemented feature engineering and model optimization techniques"
+      ],
+      technologies: ["Python", "Scikit-learn", "Streamlit", "Pandas", "Machine Learning"]
+    },
+    {
+      title: "Math Pawzle",
+      github: "https://github.com/Sravika-G/Team2_dog_math",
+      description: [
+        "Unity-based educational game focused on mathematics learning",
+        "Deployed on Azure with CI/CD pipeline implementation",
+        "Designed engaging user interface with gamification elements"
+      ],
+      technologies: ["Unity", "C#", "Azure", "Game Development", "CI/CD"]
     }
   ];
 
@@ -88,13 +86,17 @@ const Projects = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="bg-card rounded-lg p-4 md:p-6 glow-border hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
+              className="bg-card rounded-lg p-4 md:p-6 glow-border hover:shadow-[0_0_25px_hsl(142.1_76.2%_36.3%/0.4)] hover:border-primary transition-all duration-300"
             >
               <div className="space-y-4">
-                <h3 className="text-lg md:text-xl font-bold text-foreground">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg md:text-xl font-bold text-foreground hover:text-primary transition-colors duration-200 inline-block"
+                >
                   {project.title}
-                </h3>
+                </a>
 
                 <ul className="space-y-2">
                   {project.description.map((point, pointIndex) => (
@@ -115,6 +117,18 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  asChild
+                >
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    <Github className="w-4 h-4" />
+                    GitHub
+                  </a>
+                </Button>
               </div>
             </motion.div>
           ))}

@@ -57,8 +57,7 @@ const Certifications = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              whileHover={{ y: -5 }}
-              className="bg-card rounded-lg p-6 glow-border hover:shadow-lg hover:shadow-primary/20 transition-all duration-300"
+              className="bg-card rounded-lg p-6 glow-border hover:shadow-[0_0_25px_hsl(142.1_76.2%_36.3%/0.4)] transition-all duration-300"
             >
               <div className="flex items-start mb-4">
                 <div className="p-2 bg-primary/10 rounded-lg mr-4">
