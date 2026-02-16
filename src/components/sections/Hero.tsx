@@ -57,7 +57,7 @@ const Hero = () => {
                 asChild
               >
                 <a 
-                  href="/Resume.pdf" 
+                  href="/sravika-gillela-cv.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
