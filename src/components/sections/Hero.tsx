@@ -57,7 +57,7 @@ const Hero = () => {
                 asChild
               >
                 <a 
-                  href="https://1drv.ms/b/c/c7068ff6c680df91/EUP55NwLSFZKrYYsYBBVfr4BoDYu1clt0sMYRYO6OX8Fqg?e=iwqh4e" 
+                  href="/Sravika_Resume_RSE.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
