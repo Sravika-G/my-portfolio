@@ -41,7 +41,7 @@ const Hero = () => {
               className="text-base md:text-lg text-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
               Passionate about building innovative solutions with AI, machine learning, 
-              and cloud technologies. Currently pursuing my Master's in Computer Science 
+              and cloud technologies. Recently completed my Master's in Computer Science 
               at California State University, San Bernardino.
             </motion.p>
 
