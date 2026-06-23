@@ -27,10 +27,15 @@ const About = () => {
             className="space-y-4 md:space-y-6 text-base md:text-lg text-foreground leading-relaxed"
           >
             <p>
-              I'm a software engineer with a focus on AI, machine learning, and cloud-native development. 
-              I enjoy building practical products that turn data into decisions, like predictive analytics 
-              dashboards, NLP applications, and automation tools. I care about clean architecture, performance, 
-              and user-friendly design, and I like taking projects from idea to a working, deployable solution.
+              I'm a Software Engineer with a Master's in Computer Science and experience building full-stack
+              applications, distributed systems, cloud infrastructure, and AI-powered products. My background
+              includes developing scalable data pipelines, deploying machine learning workloads on Kubernetes
+              and HPC environments, building geospatial visualization systems in C++, and creating modern web
+              applications using React and cloud technologies.
+            </p>
+            <p>
+              I'm particularly interested in software engineering, AI-driven applications, distributed systems,
+              and building products that combine strong technical foundations with great user experiences.
             </p>
           </motion.div>
         </motion.div>
